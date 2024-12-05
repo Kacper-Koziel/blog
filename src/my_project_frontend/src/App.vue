@@ -31,18 +31,19 @@ getBlogs()
 </script>
 
 <template>
-  <main>
-    <img src="/logo2.svg" alt="DFINITY logo" />
-    <br />
-    <br />
-    <form action="#" @submit="handleSubmit">
-      <div><p>Title: </p><input id="title" alt="title" type="text" /></div>
-      <div><p>Content: </p><input id="content" alt="content" type="text" /></div>
-      <div><p>Tags: </p><input id="tags" alt="tags" type="text" /></div>
+  <main class="container mx-auto mt-20">
+    <form class="grid gap-10" action="#" @submit="handleSubmit">
+      <div><p class="text-white">Title: </p>
+      <input id="title" alt="title" type="text" class="w-full rounded-full py-1 px-4" /></div>
 
+      <div><p class="text-white">Content: </p>
+      <textarea id="content" alt="content" type="text" class="w-full rounded-3xl py-1 px-4 min-h-[70px]" /></div>
 
-      <button type="submit">Add blog</button>
-      {{ blogs }}
+      <div><p class="text-white">Tags: </p>
+      <input id="tags" alt="tags" type="text" class="w-full rounded-full py-1 px-4" /></div>
+
+      <div class="flex justify-end"><button type="submit" class="text-white bg-red-600 rounded-full w-50 py-2 px-12">Add blog</button></div>
     </form>
+    {{ blogs }}
   </main>
 </template>
